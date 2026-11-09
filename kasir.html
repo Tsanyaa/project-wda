@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIFood - Kasir</title>
+    <link rel="stylesheet" href="sytleka.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-logo">T</div>
+            <span>TIFood</span>
+        </div>
+
+        <nav class="navigation">
+            <a href = "#" class="nav-link">
+                <span>🏠</span> Dashboard
+            </a>                
+            <a href="#" class="nav-link"> 
+                <span>📦</span> Kelola Produk
+            </a>
+
+            <a href="#" class="nav-link active">
+                <span>🛒</span> Kasir 
+            </a>
+
+            <a href="#" class="nav-link">
+                <span>🧾</span> Riwayat Transaksi
+            </a>
+
+            <a href="#" class="nav-link">
+                <span>⚙️</span> Pengaturan
+            </a>
+        </nav>
+
+        <a href="#" class="logout">↪ Logout</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="page-heading">
+            <h1>Kasir </h1>
+            <p>
+                Hitung total belanja, pembayaran tunai,
+                dan kembalian secara otomatis
+            </p>
+        </header>
+
+        <section class="workspace">
+
+            <!-- DAFTAR PRODUK -->
+            <div class="panel products-panel">
+                <h2>Pilih Barang Pembeli</h2>
+                <div class="product-grid" id="productGrid"></div>
+            </div>
+
+            <!-- RINGKASAN PEMBELIAN -->
+            <div class="panel checkout-panel">
+
+                <div class="summary-heading">
+                    <h2>Ringkasan Pembelian</h2>
+                    <button class="text-button" id="clearCart">
+                        Hapus Semua
+                    </button>
+                </div>
+
+                <div class="cart-list" id="cartList">
+                    <p class="empty-cart">
+                        Belum ada barang yang dipilih.
+                    </p>
+                </div>
+
+                <div class="total-row">
+                    <span>Total Belanja:</span>
+                    <strong id="totalPrice">Rp 0</strong>
+                </div>
+
+                <label class="payment-label" for="paymentInput">
+                    Jumlah Uang Dibayar (Rp)
+                </label>
+
+                <input
+                    type="number"
+                    id="paymentInput"
+                    class="payment-input"
+                    placeholder="Contoh: 20.000"
+                    min="0"
+                >
+
+                <div class="change-box">
+                    <span>Uang Kembalian:</span>
+                    <strong id="changeAmount">Rp 0</strong>
+                </div>
+
+                <button class="finish-button" id="finishButton">
+                    SELESAIKAN TRANSAKSI &amp; CETAK
+                </button>
+
+                <p class="message" id="message"></p>
+
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
